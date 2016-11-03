@@ -1,0 +1,50 @@
+{
+  "name": "react-web-animated",
+  "version": "0.0.0-alpha.1",
+  "description": "Bring react-native Animated to web",
+  "scripts": {
+    "prebuild": "rimraf ./dist && mkdirp ./dist && rimraf ./lib && mkdirp ./lib",
+    "build:cjs": "babel src -d lib",
+    "build:umd": "webpack src dist/react-web-animated.js",
+    "build:min": "webpack -p src dist/react-web-animated.min.js",
+    "build": "npm run build:cjs && npm run build:umd && npm run build:min",
+    "prepublish": "npm run build"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "README.md"
+  ],
+  "author": "cap32",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-lodash": "^3.2.9",
+    "babel-plugin-module-resolver": "^2.2.0",
+    "babel-plugin-system-import-transformer": "^2.4.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "webpack": "v2.1.0-beta.25"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.18.0",
+    "emit-lite": "^0.0.2",
+    "fbjs": "^0.8.0",
+    "lodash": "^4.0.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}

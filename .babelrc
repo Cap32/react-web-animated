@@ -1,0 +1,13 @@
+{
+	"presets": [
+		"es2015",
+		"stage-0",
+		"react"
+	],
+	"plugins": [
+		["module-resolver", { "root": [ "./src" ] }],
+		"transform-runtime",
+		"lodash",
+		"add-module-exports"
+	]
+}
