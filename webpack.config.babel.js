@@ -49,6 +49,6 @@ export default {
 	devtool: 'source-map',
 	externals: {
 		react: 'React',
-		'react-dom': 'ReactDom',
+		'react-dom': 'ReactDOM',
 	},
 };
