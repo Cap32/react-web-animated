@@ -29,6 +29,7 @@ export default {
 					plugins: [
 						'transform-runtime',
 						'lodash',
+						'transform-remove-strict-mode',
 					],
 					cacheDirectory: true,
 					babelrc: false,

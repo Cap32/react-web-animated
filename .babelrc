@@ -8,6 +8,7 @@
 		["module-resolver", { "root": [ "./src" ] }],
 		"transform-runtime",
 		"lodash",
-		"add-module-exports"
+		"add-module-exports",
+		"transform-remove-strict-mode"
 	]
 }
