@@ -1,6 +1,6 @@
 {
   "name": "react-web-animated",
-  "version": "0.0.0-alpha.3",
+  "version": "0.0.0-alpha.4",
   "description": "Bring react-native Animated to web",
   "scripts": {
     "prebuild": "rimraf ./dist && mkdirp ./dist && rimraf ./lib && mkdirp ./lib",
