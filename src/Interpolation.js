@@ -13,8 +13,7 @@
 'use strict';
 
 
-var startsWith = require('babel-runtime/core-js/string/starts-with').default;
-String.prototype.startsWith || (String.prototype.startsWith = startsWith);
+require('babel-runtime/core-js/fn/string/starts-with');
 
 var invariant = require('fbjs/lib/invariant');
 var normalizeColor = require('normalizeColor');
