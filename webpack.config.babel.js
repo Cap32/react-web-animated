@@ -27,7 +27,6 @@ export default {
 						'react',
 					],
 					plugins: [
-						'transform-runtime',
 						'lodash',
 						'transform-remove-strict-mode',
 					],

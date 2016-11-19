@@ -20,7 +20,8 @@ The same with react-native http://facebook.github.io/react-native/docs/animated.
 
 ## Notes
 
-This Libary is inpired by [animated](https://github.com/animatedjs/animated). 
+- **SHOULD include `babel-polyfill` for most browsers.**
+- This Libary is inpired by [animated](https://github.com/animatedjs/animated). 
 
 ## License
 

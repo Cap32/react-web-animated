@@ -5,8 +5,12 @@
 		"react"
 	],
 	"plugins": [
-		["module-resolver", { "root": [ "./src" ] }],
-		"transform-runtime",
+		["module-resolver", {
+			"root": [ "./src" ],
+			"alias": {
+				"React": "react"
+			}
+		}],
 		"lodash",
 		"add-module-exports",
 		"transform-remove-strict-mode"
