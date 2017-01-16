@@ -18,6 +18,11 @@ $ yarn add react-web-animated
 
 The same with react-native http://facebook.github.io/react-native/docs/animated.html
 
+## Live Demos
+
+- [Basic](https://codepen.io/webb/pen/jyMZOK?editors=0010)
+- [Phantom](https://codepen.io/webb/pen/ZLpxeO?editors=0010)
+
 ## Notes
 
 - **SHOULD include `babel-polyfill` for most browsers.**
