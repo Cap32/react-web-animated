@@ -22,6 +22,7 @@ The same with react-native http://facebook.github.io/react-native/docs/animated.
 
 - [Basic](https://codepen.io/webb/pen/jyMZOK?editors=0010)
 - [Phantom](https://codepen.io/webb/pen/ZLpxeO?editors=0010)
+- [Swipeable Cards](https://codepen.io/webb/pen/ggwzZL?editors=0010)
 
 ## Notes
 
