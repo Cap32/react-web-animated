@@ -33,9 +33,9 @@ describe('library', function () {
 			componentDidMount() {
 				const { style } = findDOMNode(this);
 
-				assert.equal(parseInt(domNode.style.width, 10), defaultValue);
+				assert.equal(parseInt(style.width, 10), defaultValue);
 				this.state.anim.setValue(updatedValue);
-				assert.equal(parseInt(domNode.style.width, 10), updatedValue);
+				assert.equal(parseInt(style.width, 10), updatedValue);
 				done();
 			}
 
