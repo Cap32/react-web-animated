@@ -2,8 +2,11 @@
 import { resolve } from 'path';
 import webpack from 'webpack';
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+const { env } = process;
 
+process.env.NODE_ENV = env.NODE_ENV || 'development';
+
+const isTesting = !!env.ANIMATED_TEST;
 const PROJECT_PATH = __dirname;
 const inProject = (...args) => resolve(PROJECT_PATH, ...args);
 const inSrc = inProject.bind(null, 'src');
@@ -18,7 +21,7 @@ export default {
 		rules: [
 			{
 				test: /\.jsx?$/,
-				include: srcDir,
+				include: [srcDir, inProject('test')],
 				loader: 'babel',
 				query: {
 					presets: [
@@ -47,7 +50,7 @@ export default {
 		alias: { React: 'react' },
 	},
 	devtool: 'source-map',
-	externals: {
+	externals: isTesting ? {} : {
 		react: 'React',
 		'react-dom': 'ReactDOM',
 	},
