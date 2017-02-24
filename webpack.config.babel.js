@@ -7,6 +7,7 @@ const { env } = process;
 process.env.NODE_ENV = env.NODE_ENV || 'development';
 
 const isTesting = !!env.ANIMATED_TEST;
+const reactVersion = +(env.REACT_VERSION || 15.4);
 const PROJECT_PATH = __dirname;
 const inProject = (...args) => resolve(PROJECT_PATH, ...args);
 const inSrc = inProject.bind(null, 'src');
@@ -47,7 +48,10 @@ export default {
 	resolve: {
 		modules: [srcDir, 'node_modules'],
 		extensions: ['.js'],
-		alias: { React: 'react' },
+		alias: {
+			React: 'react',
+			// 'react-dom/lib': reactVersion >= 15.4 ? 'react-dom/lib' : 'react/lib',
+		},
 	},
 	devtool: 'source-map',
 	externals: isTesting ? {} : {

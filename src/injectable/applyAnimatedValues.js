@@ -2,7 +2,9 @@
 import { isArray, capitalize, reduce } from 'lodash';
 import invariant from 'fbjs/lib/invariant';
 import { findDOMNode } from 'react-dom';
-import CSSPropertyOperations from 'react/lib/CSSPropertyOperations';
+
+import CSSPropertyOperations from 'react-dom/lib/CSSPropertyOperations';
+// import CSSPropertyOperations from 'react/lib/CSSPropertyOperations';
 
 const prefix = (prop) => {
 	if (typeof window === 'undefined') { return prop; }
