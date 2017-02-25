@@ -14,5 +14,14 @@
 		"lodash",
 		"add-module-exports",
 		"transform-remove-strict-mode"
-	]
+	],
+	"env": {
+		"legacy": {
+			"plugins": [
+				["import-rename", {
+					"^react-dom/lib/(.*)$": "react/lib/$1"
+				}]
+			]
+		}
+	}
 }

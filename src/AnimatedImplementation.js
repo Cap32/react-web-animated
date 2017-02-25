@@ -21,8 +21,7 @@ var SpringConfig = require('SpringConfig');
 var ViewStylePropTypes = require('ViewStylePropTypes');
 var NativeAnimatedHelper = require('NativeAnimatedHelper');
 
-var findNodeHandle = require('react-dom/lib/findDOMNode');
-// var findNodeHandle = require('react/lib/findNodeHandle');
+var findNodeHandle = require('react-dom').findDOMNode;
 
 var flattenStyle = require('flattenStyle');
 var invariant = require('fbjs/lib/invariant');

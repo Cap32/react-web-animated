@@ -6,8 +6,8 @@
     "start": "npm run karma -- start",
     "test": "npm run karma -- start --single-run",
     "karma": "cross-env ANIMATED_TEST=true babel-node -- ./node_modules/.bin/karma",
-    "prebuild": "rimraf ./dist ./lib && mkdirp ./dist ./lib",
-    "build:cjs-legacy": "babel src -d lib/legacy",
+    "prebuild": "rimraf ./dist ./lib ./legacy && mkdirp ./dist ./lib ./legacy",
+    "build:cjs-legacy": "cross-env BABEL_ENV=legacy babel src -d legacy",
     "build:cjs": "babel src -d lib",
     "build:umd": "webpack src dist/react-web-animated.js",
     "build:min": "webpack -p src dist/react-web-animated.min.js",
@@ -18,6 +18,7 @@
   "files": [
     "dist",
     "lib",
+    "legacy",
     "README.md"
   ],
   "author": "cap32",
@@ -27,6 +28,7 @@
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-import-rename": "^1.0.1",
     "babel-plugin-lodash": "^3.2.9",
     "babel-plugin-module-resolver": "^2.2.0",
     "babel-plugin-system-import-transformer": "^2.4.0",
