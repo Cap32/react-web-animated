@@ -31,7 +31,6 @@ export default {
 						'react',
 					],
 					plugins: [
-						'lodash',
 						'transform-remove-strict-mode',
 					],
 					cacheDirectory: true,

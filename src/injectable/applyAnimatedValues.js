@@ -1,10 +1,18 @@
 
-import { isArray, capitalize, reduce } from 'lodash';
 import invariant from 'fbjs/lib/invariant';
+import capitalize from 'lodash.capitalize';
 import { findDOMNode } from 'react-dom';
 
 import CSSPropertyOperations from 'react-dom/lib/CSSPropertyOperations';
 // import CSSPropertyOperations from 'react/lib/CSSPropertyOperations';
+
+const reduce = (obj = {}, iterator, initialValue) => Object
+	.keys(obj)
+	.reduce(
+		(returnValue, key) => iterator(returnValue, obj[key], key),
+		initialValue,
+	)
+;
 
 const prefix = (prop) => {
 	if (typeof window === 'undefined') { return prop; }
@@ -51,7 +59,7 @@ function mapTransform(transforms) {
 
 function mapStyle(style) {
 	return reduce(style, (finalStyle, value, prop) => {
-		if (prop.indexOf('ransform') !== -1 && isArray(value)) {
+		if (prop.indexOf('ransform') !== -1 && Array.isArray(value)) {
 			value = value.map(mapTransform).join(' ');
 		}
 
