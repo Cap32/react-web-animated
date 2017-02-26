@@ -377,6 +377,10 @@ babel-plugin-check-es2015-constants@^6.3.13:
   dependencies:
     babel-runtime "^6.0.0"
 
+babel-plugin-dev-expression@^0.2.1:
+  version "0.2.1"
+  resolved "http://registry.npm.taobao.org/babel-plugin-dev-expression/download/babel-plugin-dev-expression-0.2.1.tgz#d4a7beefefbb50e3f2734990a82a2486cf9eb9ee"
+
 babel-plugin-import-rename@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/babel-plugin-import-rename/download/babel-plugin-import-rename-1.0.1.tgz#bd60618aa90a36dd944b186552da1dc389a449cf"

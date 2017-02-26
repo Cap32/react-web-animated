@@ -4,10 +4,14 @@ import webpack from 'webpack';
 
 const { env } = process;
 
-process.env.NODE_ENV = env.NODE_ENV || 'development';
+const {
+	NODE_ENV = 'development',
+	ANIMATED_TEST,
+} = process.env;
 
-const isTesting = !!env.ANIMATED_TEST;
-const reactVersion = +(env.REACT_VERSION || 15.4);
+const isTesting = !!ANIMATED_TEST;
+const isDev = NODE_ENV === 'development';
+
 const PROJECT_PATH = __dirname;
 const inProject = (...args) => resolve(PROJECT_PATH, ...args);
 const inSrc = inProject.bind(null, 'src');
@@ -41,7 +45,8 @@ export default {
 	},
 	plugins: [
 		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+			'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
+			'__DEV__': isDev,
 		}),
 	],
 	resolve: {
@@ -49,7 +54,6 @@ export default {
 		extensions: ['.js'],
 		alias: {
 			React: 'react',
-			// 'react-dom/lib': reactVersion >= 15.4 ? 'react-dom/lib' : 'react/lib',
 		},
 	},
 	devtool: 'source-map',

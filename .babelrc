@@ -11,6 +11,7 @@
 				"React": "react"
 			}
 		}],
+		"dev-expression",
 		"add-module-exports",
 		"transform-remove-strict-mode"
 	],
