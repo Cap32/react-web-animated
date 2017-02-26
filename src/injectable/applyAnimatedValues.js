@@ -44,8 +44,8 @@ const prefix = (prop) => {
 };
 
 const ensureValue = (prop, value) => {
-	const whitaList = ['translateX', 'translateY', 'translateZ', 'perspective'];
-	if (!isNaN(value) && whitaList.indexOf(prop) > -1) {
+	const whiteList = ['translateX', 'translateY', 'translateZ', 'perspective'];
+	if (!isNaN(value) && whiteList.indexOf(prop) > -1) {
 		return `${value}px`;
 	}
 	return value;
