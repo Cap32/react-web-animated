@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "capitalize": "^1.0.0",
-    "emit-lite": "^1.0.0",
+    "emit-lite": "^2.0.0",
     "fbjs": "^0.8.0"
   }
 }
