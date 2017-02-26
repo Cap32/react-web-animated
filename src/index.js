@@ -1,8 +1,10 @@
 
-var AnimatedImplementation = require('AnimatedImplementation');
-var Easing = require('Easing');
+const AnimatedImplementation = require('AnimatedImplementation');
+const Easing = require('Easing');
 
-const { createAnimatedComponent } = AnimatedImplementation;
+const {
+	createAnimatedComponent, Value, ValueXY,
+} = AnimatedImplementation;
 
 const Div = createAnimatedComponent('div');
 const Span = createAnimatedComponent('span');
@@ -16,7 +18,7 @@ module.exports = {
 	AnimatedDiv: Div,
 	AnimatedSpan: Span,
 	AnimatedImg: Img,
-	AnimatedValue: AnimatedImplementation.Value,
-	AnimatedValueXY: AnimatedImplementation.ValueXY,
+	AnimatedValue: Value,
+	AnimatedValueXY: ValueXY,
 	Easing,
 };
