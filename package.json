@@ -1,6 +1,6 @@
 {
   "name": "react-web-animated",
-  "version": "0.0.0-alpha.7",
+  "version": "0.0.0-alpha.8",
   "description": "Bring react-native Animated to web",
   "scripts": {
     "start": "npm run karma -- start",
