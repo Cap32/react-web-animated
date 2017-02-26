@@ -1,13 +1,15 @@
 
 import { resolve } from 'path';
 import webpack from 'webpack';
+import capitalize from 'lodash.capitalize';
+import { name } from './package.json';
 
 const { env } = process;
 
 const {
 	NODE_ENV = 'development',
 	ANIMATED_TEST,
-} = process.env;
+} = process;
 
 const isTesting = !!ANIMATED_TEST;
 const isDev = NODE_ENV === 'development';
@@ -19,7 +21,7 @@ const srcDir = inSrc();
 
 export default {
 	output: {
-		library: 'Animated',
+		library: capitalize(name),
 		libraryTarget: 'umd',
 	},
 	module: {
