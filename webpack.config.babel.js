@@ -1,7 +1,8 @@
 
 import { resolve } from 'path';
 import webpack from 'webpack';
-import capitalize from 'lodash.capitalize';
+import camelCase from 'lodash.camelcase';
+import capitalize from 'capitalize';
 import { name } from './package.json';
 
 const { env } = process;
@@ -21,7 +22,7 @@ const srcDir = inSrc();
 
 export default {
 	output: {
-		library: capitalize(name),
+		library: capitalize(camelCase(name)),
 		libraryTarget: 'umd',
 	},
 	module: {

@@ -1,6 +1,6 @@
 
 import invariant from 'fbjs/lib/invariant';
-import capitalize from 'lodash.capitalize';
+import capitalize from 'capitalize';
 import { findDOMNode } from 'react-dom';
 
 import CSSPropertyOperations from 'react-dom/lib/CSSPropertyOperations';
