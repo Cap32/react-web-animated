@@ -1281,6 +1281,14 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
     create-hash "^1.1.0"
     inherits "^2.0.1"
 
+create-react-class@^15.6.0:
+  version "15.6.0"
+  resolved "http://registry.npm.taobao.org/create-react-class/download/create-react-class-15.6.0.tgz#ab448497c26566e1e29413e883207d57cfe7bed4"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 cross-env@^3.1.4:
   version "3.1.4"
   resolved "http://registry.npm.taobao.org/cross-env/download/cross-env-3.1.4.tgz#56e8bca96f17908a6eb1bc2012ca126f92842130"
@@ -1577,7 +1585,7 @@ extsprintf@1.0.2:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/extsprintf/download/extsprintf-1.0.2.tgz#e1080e0658e300b06294990cc70e1502235fd550"
 
-fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.4:
+fbjs@^0.8.0:
   version "0.8.5"
   resolved "http://registry.npm.taobao.org/fbjs/download/fbjs-0.8.5.tgz#f69ba8a876096cb1b9bffe4d7c1e71c19d39d008"
   dependencies:
@@ -1587,6 +1595,18 @@ fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.4:
     loose-envify "^1.0.0"
     object-assign "^4.1.0"
     promise "^7.1.1"
+    ua-parser-js "^0.7.9"
+
+fbjs@^0.8.9:
+  version "0.8.12"
+  resolved "http://registry.npm.taobao.org/fbjs/download/fbjs-0.8.12.tgz#10b5d92f76d45575fd63a217d4ea02bea2f8ed04"
+  dependencies:
+    core-js "^1.0.0"
+    isomorphic-fetch "^2.1.1"
+    loose-envify "^1.0.0"
+    object-assign "^4.1.0"
+    promise "^7.1.1"
+    setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
 filename-regex@^2.0.0:
@@ -2077,6 +2097,10 @@ js-tokens@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/js-tokens/download/js-tokens-2.0.0.tgz#79903f5563ee778cc1162e6dcf1a0027c97f9cb5"
 
+js-tokens@^3.0.0:
+  version "3.0.2"
+  resolved "http://registry.npm.taobao.org/js-tokens/download/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
+
 jsbn@~0.1.0:
   version "0.1.0"
   resolved "http://registry.npm.taobao.org/jsbn/download/jsbn-0.1.0.tgz#650987da0dd74f4ebf5a11377a2aa2d273e97dfd"
@@ -2311,6 +2335,12 @@ loose-envify@^1.0.0, loose-envify@^1.1.0:
   dependencies:
     js-tokens "^2.0.0"
 
+loose-envify@^1.3.1:
+  version "1.3.1"
+  resolved "http://registry.npm.taobao.org/loose-envify/download/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
+  dependencies:
+    js-tokens "^3.0.0"
+
 lru-cache@2.2.x:
   version "2.2.4"
   resolved "http://registry.npm.taobao.org/lru-cache/download/lru-cache-2.2.4.tgz#6c658619becf14031d0d0b594b16042ce4dc063d"
@@ -2532,6 +2562,10 @@ object-assign@4.1.0, object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.0"
   resolved "http://registry.npm.taobao.org/object-assign/download/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
 
+object-assign@^4.1.1:
+  version "4.1.1"
+  resolved "http://registry.npm.taobao.org/object-assign/download/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+
 object-component@0.0.3:
   version "0.0.3"
   resolved "http://registry.npm.taobao.org/object-component/download/object-component-0.0.3.tgz#f0c69aa50efc95b866c186f400a33769cb2f1291"
@@ -2719,6 +2753,13 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+prop-types@^15.5.10, prop-types@^15.5.7:
+  version "15.5.10"
+  resolved "http://registry.npm.taobao.org/prop-types/download/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.3.1"
+
 prr@~0.0.0:
   version "0.0.0"
   resolved "http://registry.npm.taobao.org/prr/download/prr-0.0.0.tgz#1a84b85908325501411853d0081ee3fa86e2926a"
@@ -2797,21 +2838,24 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~1.0.4"
 
-react-dom@^15.4.2:
-  version "15.4.2"
-  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
+react-dom@^15.6.1:
+  version "15.6.1"
+  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
   dependencies:
-    fbjs "^0.8.1"
+    fbjs "^0.8.9"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
-react@15.4.2:
-  version "15.4.2"
-  resolved "http://registry.npm.taobao.org/react/download/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
+react@^15.6.1:
+  version "15.6.1"
+  resolved "http://registry.npm.taobao.org/react/download/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:
-    fbjs "^0.8.4"
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -2991,6 +3035,10 @@ set-blocking@^2.0.0, set-blocking@~2.0.0:
 set-immediate-shim@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/set-immediate-shim/download/set-immediate-shim-1.0.1.tgz#4b2b1b27eb808a9f8dcc481a58e5e56f599f3f61"
+
+setimmediate@^1.0.5:
+  version "1.0.5"
+  resolved "http://registry.npm.taobao.org/setimmediate/download/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
 
 setprototypeof@1.0.2:
   version "1.0.2"

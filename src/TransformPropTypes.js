@@ -11,7 +11,7 @@
  */
 'use strict';
 
-var ReactPropTypes = require('React').PropTypes;
+var ReactPropTypes = require('prop-types');
 
 var TransformPropTypes = {
 	transform: ReactPropTypes.arrayOf(
