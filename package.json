@@ -3,16 +3,16 @@
   "version": "0.0.0-alpha.11",
   "description": "Bring react-native Animated to web",
   "scripts": {
-    "start": "npm run karma -- start",
-    "test": "npm run karma -- start --single-run",
+    "start": "yarn karma -- start",
+    "test": "yarn karma -- start --single-run",
     "karma": "cross-env ANIMATED_TEST=true babel-node -- ./node_modules/.bin/karma",
     "prebuild": "rimraf ./dist ./lib ./legacy && mkdirp ./dist ./lib ./legacy",
     "build:cjs-legacy": "cross-env BABEL_ENV=legacy babel src -d legacy",
     "build:cjs": "babel src -d lib",
     "build:umd": "webpack src dist/react-web-animated.js",
     "build:min": "cross-env NODE_ENV=production webpack -p src dist/react-web-animated.min.js",
-    "build": "npm run build:cjs && npm run build:umd && npm run build:min && npm run build:cjs-legacy",
-    "prepublish": "npm run build"
+    "build": "yarn build:cjs && yarn build:umd && yarn build:min && yarn build:cjs-legacy",
+    "preversion": "yarn build && yarn test"
   },
   "main": "lib/index.js",
   "files": [
