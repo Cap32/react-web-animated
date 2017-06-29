@@ -10,7 +10,7 @@ const { env } = process;
 const {
 	NODE_ENV = 'development',
 	ANIMATED_TEST,
-} = process;
+} = env;
 
 const isTesting = !!ANIMATED_TEST;
 const isDev = NODE_ENV === 'development';
